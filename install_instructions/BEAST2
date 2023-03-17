@@ -1,0 +1,9 @@
+# Installing BEAST2 with GPU support
+
+[BEAST2](https://www.beast2.org) can run much faster with a GPU, which requires a [BEAGLE](https://github.com/beagle-dev/beagle-lib) library compiled with GPU support. This is not the version that you can currently install with [Anaconda](https://anaconda.org), so here we will show how to install the requirements with Anaconda and then compile and install BEAGLE to you conda environment.
+
+Currently (2023) the only GPU server at the Field Museum is CHANDLER, so these instructions will only work there
+
+## 1. Checking NVIDIA drivers
+
+
