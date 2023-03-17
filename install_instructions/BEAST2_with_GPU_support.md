@@ -2,7 +2,7 @@
 
 [BEAST2](https://www.beast2.org) can run much faster with a GPU, which requires a [BEAGLE](https://github.com/beagle-dev/beagle-lib) library compiled with GPU support. This is not the version that you can currently install with [Anaconda](https://anaconda.org), so here we will show how to install the requirements with Anaconda and then compile and install BEAGLE to you conda environment.
 
-Currently (2023) the only GPU server at the Field Museum is CHANDLER, so these instructions will only work there
+Currently (2023) the only GPU server at the Field Museum is **Chandler**, so these instructions will only work ins that server.
 
 
 
@@ -22,19 +22,19 @@ In this case, it shows that the CUDA Version is 11.8 and the CUDA driver is 520.
 As of March 2023, this is the table found in the website:
 ![nvidia cuda compatibility table](images/nvidia-cuda-table.png)
 
-This means that we need a CUDA driver of version 525.60.13 or above for a CUDA 12.x toolkit, which is above the version we currently have (520.56.06). This means we will need to install the CUDA toolkit version 11.x (that means, below version 12, but it could be any subversion of 11).
+This means that we need a CUDA driver of version 525.60.13 or above for a CUDA 12.x toolkit, which is above the version we currently have (520.56.06). Therefore, we will need to install the CUDA toolkit version 11.x (that is, below version 12, but it could be any subversion of 11).
 
 
 
 ## 2. Installing dependencies with Anaconda
 
-Now that we know the version of the cudatooljit we need, we can use Anaconda to set up an environment to run BEAST2. Let's name our enviroment `beast2`:
+Now that we know the version of the cudatooljit we need, we can use Anaconda to set up an environment to run BEAST2. Let's name our enviroment `beast2`. Notice that we are constraining the version of cudatoolkit to maintain compatibility with our server NVIDIA driver:
 
 ```sh
 conda create -n beast2 -c bioconda -c conda-forge beast2 gcc cmake autoconf automake libtool subversion pkg-config cudatoolkit-dev=11
 ```
 
-This will creat ea new conda environment with the packages we need, and we can activate it using
+This will create a new conda environment with the packages we need, and we can activate it using
 ```sh
 conda activate beast2
 ```
