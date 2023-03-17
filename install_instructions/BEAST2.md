@@ -78,4 +78,7 @@ beast -statefile checkpoint -beagle_GPU -seed 45684121 *.xml
 ```
 
 
+# Workflow contributors
+Created: B. de Medeiros March 2023
 
+Updated:
