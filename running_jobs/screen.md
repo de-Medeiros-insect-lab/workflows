@@ -22,7 +22,11 @@ To start a new session:
 screen -S my_session
 ```
 
-where `my_session` is a name that you choose. When you do this, it works like you opened a new terminal window, and you can run whatever program you need. Once your program is running, you can press `ctrl+a` to tell linux you will input a screen command, and then press `D`
+where `my_session` is a name that you choose. When you do this, it works like you opened a new terminal window, and you can run whatever program you need. 
+
+### Detaching from a session
+
+Once your program is running, you can press `ctrl+a` to tell linux you will input a screen command, and then press `D`
 This means that you want to "detach", leave it running in the background. You can then exit the server and the program will keep running.
 
 ### Listing sessions
