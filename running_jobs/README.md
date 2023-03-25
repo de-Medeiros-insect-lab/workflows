@@ -51,8 +51,27 @@ screen -r my_session
 
 where `my_session` is the name of the session. This will take you back to the screen.
 
+## Checking usage
 
-## Good practices
+Because the FMNH are shared use and do not have a scheduler system, make sure there are sufficient free cores and memory for the job that you need to run before starting.
+
+### Checking CPU and memory usage
+To check CPU and memory usage, you can use the command `top`. This will show you usage in real time, for example looking like this:
+![top.png](Example screenshot of command top)
+In this case, CPU usage is around 45% and there is about 26000 KB of free memory, or about 26 GB. To exit top, you can use `Ctrl+C`
+
+
+`top` just shows the % usage of CPUs, but not the number of CPUs. To get that, you can consult the Grainger Bioinformactics Center documentation or run the command lscpu. For example, running this on Chandler shows 72 CPUs:
+![lscpu.png](Example screenshot of command lscpu)
+
+
+### Checking GPU usage
+To check GPU usage, the command is `nvidia-smi`. A typical output would be something like this:
+![nvidia-smi.png](Example screenshot of command nvidia-smi)
+
+In this example, none of the four GPUs are not being heavily used.
+
+## Good file organization practices
 
 Because you will be mostly running programs in the background, it is a good idea to maintain a log of everything you did for better reproducibility. Avoid launching programs directly from an interactive session, and instead write scripts to run them, launching the scripts. Also, remember to capture the output of all programs into a file.
 
