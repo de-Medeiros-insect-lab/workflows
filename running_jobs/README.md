@@ -67,7 +67,7 @@ In this case, CPU usage is around 45% and there is about 26000 KB of free memory
 
 ### Checking GPU usage
 To check GPU usage, the command is `nvidia-smi`. A typical output would be something like this:
-![Example screenshot of command nvidia-smi](images/nvidia-smi.png)
+![Example screenshot of command nvidia-smi](images/nvidia_smi.png)
 
 In this example, none of the four GPUs are not being heavily used.
 
