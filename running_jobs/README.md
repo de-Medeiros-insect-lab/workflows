@@ -26,7 +26,7 @@ where `my_session` is a name that you choose. When you do this, it works like yo
 
 ### Detaching from a session
 
-Once your program is running, you can press `ctrl+a` to tell linux you will input a screen command, and then press `D`
+Once your program is running, you can press `ctrl+a` to tell linux you will input a screen command, and then press `d`
 This means that you want to "detach", leave it running in the background. You can then exit the server and the program will keep running.
 
 ### Listing sessions
