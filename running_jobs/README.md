@@ -49,6 +49,14 @@ You can reattach to a session using:
 screen -r my_session
 ```
 
+### Killing a session
+
+When you are done with working with a screen session, you can kill it in two ways:
+
+To kill an attached screen: use `ctrl+a` followed by `k`
+
+To kill a detached screen: use `screen -ls` to see the screen name or number and then use `screen -S [screen name] -X`
+
 where `my_session` is the name of the session. This will take you back to the screen.
 
 ## Checking usage
