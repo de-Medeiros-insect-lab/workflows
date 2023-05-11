@@ -1,5 +1,10 @@
 # Running jobs in the FMNH servers
 
+
+Below there are general instructions to run jobs. For specific instructions on particular programs, see:
+ * [Jupyter](docs/jupyter.md)
+
+
 ## Linux Screen
 
 The best way to run a job is to use a Linux program named screen (https://linuxize.com/post/how-to-use-linux-screen/)
