@@ -15,7 +15,7 @@ Screen works like different Windows in a graphical user interface, but for the c
 ### Set up
 
 Screen is already installed in the systems, but you can configure it for your purporses. One recommended configuration is to allow mouse scrolling of the screen while using it, which does not work correctly by default. To do this, you need to edit the file `~/.screenrc`, which you can do using this command:
-```
+```bash
 echo termcapinfo xterm* ti@:te@ >> ~/.screenrc
 ```
 
