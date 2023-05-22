@@ -4,6 +4,9 @@ MinKNOW is currently supported on Ubuntu 18.04 and 20.04 (see more on Nanopore c
 
 The following commands need to be entered into a terminal in order to configure a GPU version of Guppy with MinKNOW for MinION on Ubuntu. Note that some of the commands used in this tutorial will require superuser privileges. 
 
+Modified from [Running (live) GPU basecalling on Ubuntu 21.04](https://hackmd.io/@Miles/ryVAI_KWF)
+
+
 ## 1. Before starting installations... Make sure that your GPU driver is working properly on your device. 
 
 ```bash
@@ -156,7 +159,7 @@ sudo apt install ont-guppy
   Once Guppy is installed you should be able to check it’s paths using `which guppy_basecall_server`: /usr/bin/guppy_basecall_server; as well as its version using `/usr/bin/guppy_basecall_server --version`: Guppy Basecall Service Software, (C)Oxford Nanopore Technologies plc. Version 6.5.7+ca6d6af, client-server API version 15.0.0. 
 
 
-## 8. Set up `guppyd.service` for GPU
+## 8. Set up `guppyd.service` for GPURunning (live) GPU basecalling on Ubuntu 21.04
 
 Create a file `guppyd.service` in the directory `/lib/systemd/system`:
 
