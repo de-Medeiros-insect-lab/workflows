@@ -4,7 +4,7 @@ MinKNOW is currently supported on Ubuntu 18.04 and 20.04 (see more on Nanopore c
 
 The following commands need to be entered into a terminal in order to configure a GPU version of Guppy with MinKNOW for MinION on Ubuntu. Note that some of the commands used in this tutorial will require superuser privileges. 
 
-Modified from [Running (live) GPU basecalling on Ubuntu 21.04](https://hackmd.io/@Miles/ryVAI_KWF)
+Modified from [Running (live) GPU basecalling on Ubuntu 21.04](https://hackmd.io/@Miles/ryVAI_KWF).
 
 
 ## 1. Before starting installations... Make sure that your GPU driver is working properly on your device. 
