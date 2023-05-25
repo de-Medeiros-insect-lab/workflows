@@ -12,7 +12,7 @@ conda search "^python$"
 
 This will display a list of available Python versions on Phoebe, as below: 
 
-[screenshot showing the available versions of Python on Phoebe](images/python_versions_Phoebe)
+[screenshot showing the available versions of Python on Phoebe](images/python_versions_Phoebe.png)
 
 
 ## 2. Create a new Conda environment with a Python version 2.7. In this case, we are creating an environment with `Python 2.7.18`, which is compatible with poretools installation:
