@@ -35,7 +35,7 @@ By creating this separate Conda environment with Python 2.7.18, you can isolate 
 ## 4. Install poretools using Conda:
 
 ```
-conda install poretools
+conda install -c bioconda poretools
 ```
 
 
