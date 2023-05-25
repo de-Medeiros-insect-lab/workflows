@@ -1,7 +1,6 @@
 # Installation of poretools using Conda on Phoebe
-https://anaconda.org/bioconda/poretools
 
-The installation of `poretools` using Conda requires Python 2.7. The current default version of Python on Phoebe is Python 3, so you will need to explicitly specify that you want to use a different minor version of Python in order to install poretools. You can do that by creating a new Conda environment with Python 2.7.
+The installation of `poretools` using [Conda](https://anaconda.org/bioconda/poretools) requires Python 2.7. The current default version of Python on Phoebe is Python 3, so you will need to explicitly specify that you want to use a different minor version of Python in order to install poretools. You can do that by creating a new Conda environment with Python 2.7.
 
 
 ## 1. Check the available versions of Python that are compatible with Conda by running the following command:
