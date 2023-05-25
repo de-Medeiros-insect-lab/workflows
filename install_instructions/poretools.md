@@ -42,10 +42,10 @@ conda install -c bioconda poretools
 ### Example: using poretools to create a tarball from a set of FAST5 files
 
 ```
-poretools combine -o foo.fast5.tar.gz /directory/to/your/data/*.fast5
+poretools combine -o foo.fast5.tar.gz directory/to/your/data/*.fast5
 ```
 
-In this example, `/directory/to/your/data/` can be replaced with the directory containing the FAST5 files you want to combine as a .tar.gz file.
+In this example, `directory/to/your/data/` can be replaced with the directory containing the FAST5 files you want to combine as a .tar.gz file. These commands will save a file `foo.fast5.tar.gz` on your current directory.
 
 
 ## References
