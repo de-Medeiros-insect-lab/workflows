@@ -1,6 +1,6 @@
 # Running jupyter notebooks
 
-1. make a conda environent including jupytelab:
+1. On the server (for example, Joey), make a conda environent including jupyterlab:
 ```bash
 conda install -c conda-forge jupyterlab
 ```
@@ -18,7 +18,7 @@ Copy the url with **localhost** in it (in the example above, `http://localhost:9
 
 3. on your computer, open a new terminal window and connect to the server through ssh using the same port number you used in the server:
 ```bash
-ssh -NL localhost:9734:localhost:9734 bdemedeiros@$FMNH_CHANDLER
+ssh -NL localhost:9734:localhost:9734 bdemedeiros@10.10.10.110
 ```
 
 4. open a browser (e. g. Chrome) and put the url you copied in step 2 in the address bar.
