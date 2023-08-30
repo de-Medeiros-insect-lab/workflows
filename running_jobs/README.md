@@ -3,6 +3,7 @@
 
 Below there are general instructions to run jobs. For specific instructions on particular programs, see:
  * [Jupyter](docs/jupyter.md)
+ * [fastai/pytorch](docs/fastai_pytorch.md)
 
 
 ## Linux Screen
