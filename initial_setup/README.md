@@ -1,6 +1,9 @@
 # Initial setup
 
-## Getting access and basic linus usage
+## Windows users
+The most straightforward way to use a Unix terminal on Windows is to install the Windows Subsystem for Linux. Check instructions [here](https://learn.microsoft.com/en-us/windows/wsl/install).
+
+## Getting access and basic Linux usage
 
 Check this repository for general Grainger Bioinformatics Center (GBC) instructions for server access and initial setup: <https://felixgrewe.github.io/linux_cookbook/>
 
