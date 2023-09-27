@@ -16,7 +16,7 @@ After this, a few messages will be shown, including a url with **localhost** in 
 Copy the url with **localhost** in it (in the example above, `http://localhost:9734/lab?token=1026de2f88f0f4e66bbdcf3d541307594ccbdae19b1ce139`)
 
 
-3. on your computer, open a new terminal window and connect to the server through ssh using the same port number you used in the server:
+3. on your computer, open a new terminal window and connect to the server through ssh using the same port number you used in the server (change the IP address to the correct address for the server):
 ```bash
 ssh -L localhost:9734:localhost:9734 bdemedeiros@10.10.10.110
 ```
