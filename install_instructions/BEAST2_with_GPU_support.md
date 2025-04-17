@@ -31,7 +31,7 @@ This means that we need a CUDA driver of version 525.60.13 or above for a CUDA 1
 Now that we know the version of the cudatooljit we need, we can use Anaconda to set up an environment to run BEAST2. Let's name our enviroment `beast2`. Notice that we are constraining the version of cudatoolkit to maintain compatibility with our server NVIDIA driver:
 
 ```sh
-conda create -n beast2 -c bioconda -c conda-forge beast2 gcc cmake autoconf automake libtool subversion pkg-config cudatoolkit-dev=11
+conda create -n beast2  -c bioconda -c conda-forge  python=3.9  beast2 gcc cmake autoconf automake libtool subversion pkg-config  cudatoolkit-dev=11  setuptools cmake make ninja
 ```
 
 This will create a new conda environment with the packages we need, and we can activate it using
@@ -47,12 +47,12 @@ After activating the environment, let's compile and install BEAGLE with GPU supp
 ```sh
 conda activate beast2
 cd ~
-git clone --depth=1 https://github.com/beagle-dev/beagle-lib.git
+git clone https://github.com/beagle-dev/beagle-lib.git
 cd beagle-lib
-mkdir build
-cd build
-cmake -DBUILD_CUDA=ON -DCMAKE_INSTALL_PREFIX:PATH=$CONDA_PREFIX ..
-make install
+mkdir -p build && cd build
+cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release -DBUILD_CPU=ON -DBUILD_CUDA=ON -DBUILD_OPENCL=OFF
+ninja
+ninja install
 ```
 
 This is slightly different from the instructions in BEAGLE github repository, to make sure that the BEAGLE library is installed within this conda environment and not to your home folder.
@@ -77,8 +77,35 @@ conda activate beast2
 beast -statefile checkpoint -beagle_GPU -seed 45684121 *.xml
 ```
 
+⚠️ Note: The latest version of BEAST2 available via conda is v2.6.3.
+If you’re using a newer version like v2.7.7, download it manually from the [BEAST2 website](https://www.beast2.org/), then extract it:
+```sh
+tar fxz BEAST.v2.7.7.Linux.x86.tgz
+```
+
+To run it, use the full path to the BEAST executable:
+
+```sh
+./beast/bin/beast -statefile checkpoint -beagle_GPU -seed 45684121 *.xml
+```
+
+### Optimizing GPU Usage
+
+To distribute the analysis across multiple GPUs (e.g., 4), add:
+```sh
+-beagle_order 1,2,3,4
+```
+
+To further optimize performance, you can also add:
+```sh
+-instances 16
+```
+
+This splits the alignment into 16 parts, allowing better task distribution across GPUs. You can experiment with the number of instances for best performance, but be aware that too few causes uneven workload, too many increases CPU overhead.
+
+
 
 # Workflow contributors
 Created: B. de Medeiros March 2023
 
-Updated:
+Updated: D. Souza, April 2025
