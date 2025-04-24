@@ -98,11 +98,21 @@ To distribute the analysis across multiple GPUs (e.g., 4), add:
 
 To further optimize performance, you can also add:
 ```sh
--instances 16
+-instances 4
 ```
 
-This splits the alignment into 16 parts, allowing better task distribution across GPUs. You can experiment with the number of instances for best performance, but be aware that too few causes uneven workload, too many increases CPU overhead.
+This splits the alignment into 4 parts, allowing better task distribution across GPUs. You can experiment with the number of instances for best performance, but be aware that too few causes uneven workload, too many increases CPU overhead.
 
+> We tested 6 different values for the `-instances` parameter using a short MCMC run (2 million generations). Based on runtime performance, I selected **4 instances** as the most efficient setting for this dataset and server configuration:
+>
+> | Instances | Runtime (sec) |
+> |-----------|----------------|
+> | 4         | **9,577**      |
+> | 8         | 12,646         |
+> | 16        | 16,569         |
+> | 32        | 12,933         |
+> | 48        | 16,016         |
+> | 64        | 24,036         |
 
 
 # Workflow contributors
